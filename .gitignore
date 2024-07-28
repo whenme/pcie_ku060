@@ -13,8 +13,6 @@
 
 # Compiled Dynamic libraries
 *.so
-*.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -45,3 +43,6 @@ fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.ip_user_files
 fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.sim
 fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.hw
 fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.runs
+
+build
+linux/build
