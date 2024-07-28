@@ -30,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+# vivado files
+vivado*
+fpga/project/project.cache
+fpga/project/project.gen
+fpga/project/project.hw
+fpga/project/project.ip_user_files
+fpga/project/project.runs
+fpga/project/project.sim
+fpga/project/project.tmp
+fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.cache
+fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.ip_user_files
+fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.sim
+fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.hw
+fpga/ip/cogpu/cogpu_v1_0_project/cogpu_v1_0_project.runs

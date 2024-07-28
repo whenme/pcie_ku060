@@ -1,0 +1,58 @@
+set_property PACKAGE_PIN E22 [get_ports sysclk_clk_p]
+set_property IOSTANDARD DIFF_SSTL12 [get_ports sysclk_clk_p]
+
+set_property LOC PCIE_3_1_X0Y0 [get_cells pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_pcie3_uscale_top_inst/pcie3_uscale_wrapper_inst/PCIE_3_1_inst]
+set_property PACKAGE_PIN K22 [get_ports pcie_rst_n]
+set_property IOSTANDARD LVCMOS33 [get_ports pcie_rst_n]
+
+# PCI Express reference clock 100MHz
+create_clock -period 10.000 -name pcie_sys_clk -waveform {0.000 5.000} [get_ports {pcie_ref_clk_p[0]}]
+set_property PACKAGE_PIN P6 [get_ports {pcie_ref_clk_p[0]}]
+# MGT locations
+set_property LOC GTHE3_CHANNEL_X1Y15 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[3].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN G4 [get_ports {pcie_mgt_txp[0]}]
+set_property LOC GTHE3_CHANNEL_X1Y14 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[2].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN J4 [get_ports {pcie_mgt_txp[1]}]
+set_property LOC GTHE3_CHANNEL_X1Y13 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN L4 [get_ports {pcie_mgt_txp[2]}]
+set_property LOC GTHE3_CHANNEL_X1Y12 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN N4 [get_ports {pcie_mgt_txp[3]}]
+set_property LOC GTHE3_CHANNEL_X1Y11 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[24].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[3].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN R4 [get_ports {pcie_mgt_txp[4]}]
+set_property LOC GTHE3_CHANNEL_X1Y10 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[24].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[2].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN U4 [get_ports {pcie_mgt_txp[5]}]
+set_property LOC GTHE3_CHANNEL_X1Y9 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[24].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN W4 [get_ports {pcie_mgt_txp[6]}]
+set_property LOC GTHE3_CHANNEL_X1Y8 [get_cells {pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/pcie_system_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.pcie_system_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[24].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST}]
+set_property PACKAGE_PIN AA4 [get_ports {pcie_mgt_txp[7]}]
+
+set_property PACKAGE_PIN AK28 [get_ports {led_tri_o[0]}]
+set_property PACKAGE_PIN AJ28 [get_ports {led_tri_o[1]}]
+set_property PACKAGE_PIN W30 [get_ports {led_tri_o[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_tri_o[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_tri_o[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_tri_o[0]}]
+
+set_property PACKAGE_PIN AK30 [get_ports {button_tri_i[0]}]
+set_property PACKAGE_PIN AJ30 [get_ports {button_tri_i[1]}]
+set_property PACKAGE_PIN AJ31 [get_ports {button_tri_i[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {button_tri_i[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {button_tri_i[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {button_tri_i[0]}]
+
+#set_property PACKAGE_PIN AJ30 [get_ports {user_link_up}]
+#set_property IOSTANDARD LVCMOS18 [get_ports {user_link_up}]
+
+set_property CFGBVS VCCO [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property BITSTREAM.GENERAL.COMPRESS true [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 50 [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_FALL_EDGE Yes [current_design]
+
+
+set_clock_groups -asynchronous -group [get_clocks -of_objects [get_pins pcie_system_i/xdma_0/inst/pcie3_ip_i/inst/pcie_system_xdma_0_0_pcie3_ip_gt_top_i/phy_clk_i/bufg_gt_userclk/O]] -group [get_clocks -of_objects [get_pins pcie_system_i/ddr4_0/inst/u_ddr4_infrastructure/gen_mmcme3.u_mmcme_adv_inst/CLKOUT1]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]
