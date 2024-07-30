@@ -40,7 +40,7 @@
           "auto_ds": ""
         }
       },
-      "cogpu_0": ""
+      "cogpu_v1_0_S00_AXI_0": ""
     },
     "interface_ports": {
       "pcie_mgt": {
@@ -1412,12 +1412,19 @@
           }
         }
       },
-      "cogpu_0": {
-        "vlnv": "user.org:user:cogpu:1.0",
-        "ip_revision": "1",
-        "xci_name": "system_cogpu_0_0",
-        "xci_path": "ip/system_cogpu_0_0/system_cogpu_0_0.xci",
-        "inst_hier_path": "cogpu_0"
+      "cogpu_v1_0_S00_AXI_0": {
+        "vlnv": "user.org:user:cogpu_v1_0_S00_AXI:1.0",
+        "ip_revision": "3",
+        "xci_name": "system_cogpu_v1_0_S00_AXI_0_0",
+        "xci_path": "ip/system_cogpu_v1_0_S00_AXI_0_0/system_cogpu_v1_0_S00_AXI_0_0.xci",
+        "inst_hier_path": "cogpu_v1_0_S00_AXI_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "S_AXI"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1465,8 +1472,8 @@
       },
       "axi_interconnect_1_M02_AXI": {
         "interface_ports": [
-          "axi_interconnect_1/M02_AXI",
-          "cogpu_0/S00_AXI"
+          "cogpu_v1_0_S00_AXI_0/S_AXI",
+          "axi_interconnect_1/M02_AXI"
         ]
       },
       "ddr4_0_C0_DDR4": {
@@ -1563,8 +1570,8 @@
           "axi_interconnect_1/M01_ACLK",
           "axi_interconnect_1/S00_ACLK",
           "axi_interconnect_1/ACLK",
-          "cogpu_0/s00_axi_aclk",
-          "axi_interconnect_1/M02_ACLK"
+          "axi_interconnect_1/M02_ACLK",
+          "cogpu_v1_0_S00_AXI_0/S_AXI_ACLK"
         ]
       },
       "xdma_0_axi_aresetn": {
@@ -1577,8 +1584,8 @@
           "axi_interconnect_1/M01_ARESETN",
           "axi_interconnect_1/S00_ARESETN",
           "axi_interconnect_1/ARESETN",
-          "cogpu_0/s00_axi_aresetn",
-          "axi_interconnect_1/M02_ARESETN"
+          "axi_interconnect_1/M02_ARESETN",
+          "cogpu_v1_0_S00_AXI_0/S_AXI_ARESETN"
         ]
       },
       "xdma_0_user_lnk_up": {
@@ -1614,12 +1621,10 @@
                 "offset": "0x44A00000",
                 "range": "8K"
               },
-              "SEG_cogpu_0_S00_AXI_reg": {
-                "address_block": "/cogpu_0/S00_AXI/S00_AXI_reg",
+              "SEG_cogpu_v1_0_S00_AXI_0_reg0": {
+                "address_block": "/cogpu_v1_0_S00_AXI_0/S_AXI/reg0",
                 "offset": "0x44A20000",
-                "range": "64K",
-                "offset_base_param": "C_S00_AXI_BASEADDR",
-                "offset_high_param": "C_S00_AXI_HIGHADDR"
+                "range": "4K"
               }
             }
           }

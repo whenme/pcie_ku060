@@ -29,17 +29,24 @@ void setLed(int id, int state)
 
 void bramTest()
 {
-    uint32_t i, temp = 0;
-    for (i = 0; i < 512; i++)
+    bool  result = true;
+    uint32_t i, temp;
+    for (i = 0; i < 512; i+=4)
         write_user(0x10000+i, i);
 
-    for (i = 0; i < 512; i++) {
+    for (i = 0; i < 512; i+=4) {
         read_user(0x10000+i, &temp);
         if (temp != i) {
-            std::cout<<"BRAM error i="<<i<<" temp="<< temp<<std::endl;
+            std::cout << "BRAM error i=" << i << " temp="<< temp << std::endl;
+            result = false;
             break;
         }
     }
+
+    if (result)
+        std::cout<<"BRAM test pass!" << std::endl;
+    else
+        std::cout<<"BRAM test failed..." << std::endl;
 }
 
 int main(int argc, char *argv[])
